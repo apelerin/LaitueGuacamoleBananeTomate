@@ -1,7 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import RecipeListScreen from './screens/RecipeListScreen';
+import RecipeListScreen from './screens/recipeListScreen';
 
 const Stack = createNativeStackNavigator();
 
