@@ -27,7 +27,7 @@ const LoginScreen = () => {
         element => element.nickname === nickname,
       );
       if (userInStorage.password === password) {
-        route.params.setLogged(true);
+        route.params.setLogged({authState: true, userId: userInStorage.id});
       }
     });
     setNickname('');

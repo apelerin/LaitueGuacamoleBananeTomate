@@ -10,9 +10,11 @@ const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
   const [isLogged, setLogged] = useState(false);
+  const [userId, setUserId] = useState({});
 
-  const makeLogged = value => {
-    setLogged(value);
+  const setLoggedFunction = value => {
+    setLogged(value.authState);
+    setUserId(value.userId);
   };
 
   return (
@@ -32,7 +34,7 @@ const AppNavigator = () => {
           <Stack.Screen
             name="login"
             component={LoginScreen}
-            initialParams={{setLogged: makeLogged}}
+            initialParams={{setLogged: setLoggedFunction}}
           />
         </>
       )}
