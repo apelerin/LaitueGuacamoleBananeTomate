@@ -13,27 +13,25 @@ const renderRecipeItem = item => {
 const RecipeListView = () => {
   const [recipeList, setRecipeList] = useState([]);
 
-  const test = value => {
-    setRecipeList([...recipeList, value]);
-  };
-
   useEffect(() => {
-    for (let i = 0; i < 10; i++) {
-      axios.get(`${baseUrl}/random.php`).then(response => {
-        const {idMeal, strMealThumb, strMeal} = response.data.meals[0];
-        console.log(i);
-        test({
-          idMeal: idMeal,
-          strMeal: strMeal,
-          strMealThumb: strMealThumb,
+    async function fetchData() {
+      let list = [];
+      for (let i = 0; i < 10; i++) {
+        await axios.get(`${baseUrl}/random.php`).then(response => {
+          const {idMeal, strMealThumb, strMeal} = response.data.meals[0];
+          console.log(i);
+          list.push({
+            idMeal: idMeal,
+            strMeal: strMeal,
+            strMealThumb: strMealThumb,
+          });
         });
-      });
+      }
+      console.log(list);
+      setRecipeList(list);
     }
+    fetchData();
   }, []);
-
-  useEffect(() => {
-    console.log(recipeList);
-  }, [recipeList]);
 
   return (
     <SafeAreaView style={style.mainContainer}>
