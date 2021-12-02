@@ -1,7 +1,9 @@
 import React from 'react';
-import {Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {ImageBackground, Text, TouchableOpacity, View} from 'react-native';
 import SafeAreaView from 'react-native/Libraries/Components/SafeAreaView/SafeAreaView';
 import {useNavigation} from '@react-navigation/native';
+
+import style from './authScreen.style';
 
 const SignUpScreen = () => {
   const navigation = useNavigation();
@@ -10,31 +12,29 @@ const SignUpScreen = () => {
   };
 
   return (
-    <SafeAreaView style={styles.mainContainer}>
-      <TouchableOpacity
-        style={styles.submitButton}
-        onPress={() => goTo('login')}>
-        <Text>Se connecter</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.submitButton}
-        onPress={() => goTo('signUp')}>
-        <Text>S'inscrire</Text>
-      </TouchableOpacity>
+    <SafeAreaView style={style.mainContainer}>
+      <View style={style.headerContainer}>
+        <Text style={style.welcomingTextStyle}>Bienvenue sur</Text>
+        <Text style={style.appNameStyle}>Laitue Guacamole Banane Tomate</Text>
+      </View>
+      <ImageBackground
+        style={style.backgroundImageStyle}
+        source={require('../../../assets/img/appIcon.png')}
+      />
+      <View style={style.buttonContainer}>
+        <TouchableOpacity
+          style={style.submitButton}
+          onPress={() => goTo('login')}>
+          <Text>Se connecter</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={style.submitButton}
+          onPress={() => goTo('signUp')}>
+          <Text>S'inscrire</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-  submitButton: {
-    borderWidth: 1,
-    borderRadius: 10,
-    height: 30,
-    width: 150,
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    flexDirection: 'column',
-    marginBottom: 20,
-  },
-});
 export default SignUpScreen;
