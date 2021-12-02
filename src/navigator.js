@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import DetailScreen from './screens/detailscreendir/detailScreen';
-import listRecipeView from './screens/listRecipeView/listRecipeView';
+import RecipeListView from './screens/listRecipeView/recipeListView';
 import SignUpScreen from './screens/authScreens/signUpScreen/signUpScreen';
 import LoginScreen from './screens/authScreens/loginScreen/loginScreen';
 import AuthScreen from './screens/authScreens/authScreen';
@@ -11,9 +11,11 @@ const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
   const [isLogged, setLogged] = useState(false);
+  const [userId, setUserId] = useState({});
 
-  const makeLogged = value => {
-    setLogged(value);
+  const setLoggedFunction = value => {
+    setLogged(value.authState);
+    setUserId(value.userId);
   };
 
   return (
@@ -24,7 +26,7 @@ const AppNavigator = () => {
       }}>
       {isLogged ? (
         <>
-          <Stack.Screen name="recipeList" component={listRecipeView} />
+          <Stack.Screen name="recipeList" component={RecipeListView} />
           <Stack.Screen name="DetailScreen" component={DetailScreen} />
         </>
       ) : (
@@ -34,7 +36,7 @@ const AppNavigator = () => {
           <Stack.Screen
             name="login"
             component={LoginScreen}
-            initialParams={{setLogged: makeLogged}}
+            initialParams={{setLogged: setLoggedFunction}}
           />
         </>
       )}

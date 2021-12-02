@@ -19,9 +19,16 @@ const SignUpScreen = () => {
   const navigation = useNavigation();
 
   const addUserToStorage = () => {
+    let id;
+    AsyncStorage.getItem('lastId', (err, result) => {
+      result = result === null ? 0 : JSON.parse(result);
+      id = result;
+      AsyncStorage.setItem('lastId', JSON.stringify(result + 1));
+    });
     const user = {
       nickname: nickname,
       password: password,
+      id: id,
     };
     setNickname('');
     setPassword('');
