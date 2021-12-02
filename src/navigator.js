@@ -1,7 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import RecipeListScreen from './screens/recipeListScreen';
+import listRecipeView from './screens/listRecipeView/listRecipeView'
 
 const Stack = createNativeStackNavigator();
 
@@ -12,7 +12,7 @@ const AppNavigator = () => {
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name="recipeList" component={RecipeListScreen} />
+      <Stack.Screen name="recipeList" component={listRecipeView} />
     </Stack.Navigator>
   );
 };
