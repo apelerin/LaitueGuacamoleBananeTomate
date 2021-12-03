@@ -1,7 +1,14 @@
 import React, {useEffect, useState} from 'react';
 
-import {SafeAreaView, Image, Text, FlatList} from 'react-native';
-import styles from './detailsstyles.js';
+import {
+  SafeAreaView,
+  Image,
+  Text,
+  FlatList,
+  View,
+  ScrollView,
+} from 'react-native';
+import style from './detailScreen.style';
 import {useRoute} from '@react-navigation/native';
 import axios from 'axios';
 
@@ -23,6 +30,7 @@ const DetailScreen = () => {
       setMeal(mealTmp);
     }
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -43,17 +51,35 @@ const DetailScreen = () => {
   }, [meal]);
 
   const renderItem = ({item}) => (
-    <Text>
+    <Text style={style.ingredientTextStyle}>
       {item.ingredient} --------- {item.measure}
     </Text>
   );
 
   return (
-    <SafeAreaView>
-      <Text>{meal.strMeal}</Text>
-      <Image source={{uri: meal.strMealThumb}} style={styles.image} />
-      <FlatList data={ingredientList} renderItem={renderItem} />
-      <Text>{meal.strInstructions}</Text>
+    <SafeAreaView style={style.mainContainer}>
+      <View style={style.headerContainer}>
+        <Text style={style.recipeTitle}>{meal.strMeal}</Text>
+      </View>
+      <ScrollView style={style.descriptionContainer}>
+        <Image source={{uri: meal.strMealThumb}} style={style.recipePicture} />
+        <FlatList
+          data={ingredientList}
+          renderItem={renderItem}
+          style={{marginVertical: 20}}
+        />
+        <Text style={style.recipeStepsTextStyle}>{meal.strInstructions}</Text>
+        <View style={style.likeContainer}>
+          <Image
+            source={require('../../../assets/img/yummy.png')}
+            style={style.likeButtonStyle}
+          />
+          <Image
+            source={require('../../../assets/img/puking.png')}
+            style={style.likeButtonStyle}
+          />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

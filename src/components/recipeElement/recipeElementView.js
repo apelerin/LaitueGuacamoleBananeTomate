@@ -7,7 +7,7 @@ const RecipeElementView = ({recipe}) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
-      style={style.itemStyle}
+      style={style.itemContainer}
       onPress={() => {
         navigation.navigate('detailScreen', {
           idMeal: recipe.idMeal,
