@@ -23,32 +23,38 @@ const style = StyleSheet.create({
 
   descriptionContainer: {
     alignItems: 'flex-start',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
     flexDirection: 'column',
-    width: 250,
+    width: 270,
+    height: 100,
   },
 
   titleText: {
     fontSize: 22,
     fontWeight: 'bold',
     color: '#000000',
-    margin: 10,
+    marginStart: 10,
+    marginTop: 5,
   },
 
   likeContainer: {
     alignItems: 'flex-end',
     justifyContent: 'flex-end',
     flexDirection: 'row',
+    width: 270,
+    marginBottom: 5,
   },
 
   likePictureStyle: {
-    width: 45,
-    height: 45,
+    width: 35,
+    height: 35,
   },
 
   likeNumberStyle: {
-    marginEnd: 15,
-    fontSize: 25,
+    marginEnd: 30,
+    marginStart: 5,
+    fontSize: 20,
+    fontFamily: 'Trebuchet MS',
   },
 });
 

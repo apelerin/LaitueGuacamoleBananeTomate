@@ -16,12 +16,12 @@ const RecipeElementView = ({recipe}) => {
             style={style.likePictureStyle}
             source={require('../../../assets/img/yummy.png')}
           />
-          <Text style={style.likeNumberStyle}>38</Text>
+          <Text style={[style.likeNumberStyle, {color: '#207836'}]}>38</Text>
           <Image
             style={style.likePictureStyle}
             source={require('../../../assets/img/puking.png')}
           />
-          <Text style={style.likeNumberStyle}>10</Text>
+          <Text style={[style.likeNumberStyle, {color: '#d43d2c'}]}>10</Text>
         </View>
       </View>
     </TouchableOpacity>
