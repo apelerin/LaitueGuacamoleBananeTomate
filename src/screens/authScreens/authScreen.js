@@ -71,5 +71,4 @@ const SignUpScreen = () => {
     </SafeAreaView>
   );
 };
-
 export default SignUpScreen;
