@@ -1,10 +1,12 @@
 import React from 'react';
 import style from './recipeElementView.style';
 import {TouchableOpacity, Text, Image, View} from 'react-native';
+import {Searchbar} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
 
 const RecipeElementView = ({recipe}) => {
   const navigation = useNavigation();
+
   return (
     <TouchableOpacity
       style={style.itemStyle}

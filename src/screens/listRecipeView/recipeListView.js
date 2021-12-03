@@ -1,8 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import {SafeAreaView, FlatList} from 'react-native';
 import style from './listRecipeView.style';
 import RecipeElementView from '../../components/recipeElement/recipeElementView';
 import axios from 'axios';
+import {Searchbar} from 'react-native-paper';
 
 const baseUrl = 'https://www.themealdb.com/api/json/v1/1';
 
@@ -31,10 +32,15 @@ const RecipeListView = () => {
     fetchData();
   }, []);
 
+  const [search, setSearch] = React.useState('');
+  const dataFilter = useMemo(() => {
+    return recipeList.filter(o => o.strMeal.includes(search));
+  }, [recipeList, search]);
   return (
     <SafeAreaView style={style.mainContainer}>
+      <Searchbar placeholder="Search" onChangeText={setSearch} value={search} />
       <FlatList
-        data={recipeList}
+        data={dataFilter}
         renderItem={({item}) => renderRecipeItem(item)}
       />
     </SafeAreaView>
