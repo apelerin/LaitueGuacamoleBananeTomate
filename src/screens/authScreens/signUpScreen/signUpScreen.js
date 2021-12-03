@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import {
   Image,
   Text,
@@ -17,6 +17,9 @@ const SignUpScreen = () => {
   const [nickname, setNickname] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [isMDPValid, setIsMDPValid] = useState(true);
+  const [isConfMDPValid, setIsConfMDPValid] = useState(true);
+
   const navigation = useNavigation();
 
   const addUserToStorage = () => {
@@ -41,6 +44,18 @@ const SignUpScreen = () => {
     });
   };
 
+  const validateConfMdp = useCallback(() => {
+    setIsConfMDPValid(confirmPassword === password);
+  }, [confirmPassword, password]);
+
+  const validateMDP = useCallback(() => {
+    setIsMDPValid(password.length >= 3);
+
+    if (confirmPassword) {
+      validateConfMdp();
+    }
+  }, [confirmPassword, password, validateConfMdp]);
+
   return (
     <SafeAreaView style={style.mainContainer}>
       <View style={style.headerContainer}>
@@ -59,24 +74,35 @@ const SignUpScreen = () => {
           onChangeText={setNickname}
         />
         <TextInput
-          style={style.inputFields}
+          style={[
+            style.inputFields,
+            {borderColor: isMDPValid ? 'black' : 'red'},
+          ]}
           placeholder="Mot de passe"
           secureTextEntry={true}
           keyboardType="ascii-capable"
           value={password}
           onChangeText={setPassword}
+          onEndEditing={validateMDP}
         />
         <TextInput
-          style={style.inputFields}
+          style={[
+            style.inputFields,
+            {borderColor: isConfMDPValid ? 'black' : 'red'},
+          ]}
           placeholder="Confirmation du mot de passe"
           secureTextEntry={true}
           keyboardType="ascii-capable"
           value={confirmPassword}
           onChangeText={setConfirmPassword}
+          onEndEditing={validateConfMdp}
         />
       </View>
       <View style={style.footerContainer}>
-        <TouchableOpacity style={style.submitButton} onPress={addUserToStorage}>
+        <TouchableOpacity
+          style={style.submitButton}
+          onPress={addUserToStorage}
+          disabled={!isMDPValid || !isConfMDPValid}>
           <Text>Envoyer</Text>
         </TouchableOpacity>
         <Button title={'Retour'} onPress={navigation.goBack} />

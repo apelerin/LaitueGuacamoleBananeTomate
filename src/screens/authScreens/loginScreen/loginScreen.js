@@ -27,6 +27,9 @@ const LoginScreen = () => {
       const userInStorage = result.find(
         element => element.nickname === nickname,
       );
+      if (userInStorage === undefined) {
+        return;
+      }
       if (userInStorage.password === password) {
         route.params.setLogged({authState: true, userId: userInStorage.id});
       }
