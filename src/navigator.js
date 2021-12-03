@@ -8,11 +8,15 @@ import SignUpScreen from './screens/authScreens/signUpScreen/signUpScreen';
 import LoginScreen from './screens/authScreens/loginScreen/loginScreen';
 import AuthScreen from './screens/authScreens/authScreen';
 import LikedRecipeListView from './screens/likedRecipeListScreen/likedRecipeListScreen';
+import SignOut from './components/signOut';
+import {useRoute} from '@react-navigation/native';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
+  const route = useRoute();
+
   return (
     <Tab.Navigator
       screenOptions={{
@@ -20,6 +24,11 @@ const TabNavigator = () => {
       }}>
       <Tab.Screen name="recipeList" component={RecipeListView} />
       <Tab.Screen name="likedRecipeList" component={LikedRecipeListView} />
+      <Tab.Screen
+        name="signOut"
+        component={SignOut}
+        initialParams={{signOut: route.params.setLogged}}
+      />
     </Tab.Navigator>
   );
 };
@@ -41,7 +50,11 @@ const AppNavigator = () => {
       }}>
       {isLogged ? (
         <>
-          <Stack.Screen name="Tab" component={TabNavigator} />
+          <Stack.Screen
+            name="Tab"
+            component={TabNavigator}
+            initialParams={{setLogged: setLoggedFunction}}
+          />
           <Stack.Screen name="detailScreen" component={DetailScreen} />
         </>
       ) : (
