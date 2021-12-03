@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {SafeAreaView, FlatList, RefreshControl} from 'react-native';
+import {SafeAreaView, FlatList, RefreshControl, View, Text} from 'react-native';
 import style from './listRecipeView.style';
 import RecipeElementView from '../../components/recipeElement/recipeElementView';
 import axios from 'axios';
@@ -41,10 +41,41 @@ const RecipeListView = () => {
     setRefreshing(true);
     setToggle(!toggle);
     wait(2000).then(() => setRefreshing(false));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <SafeAreaView style={style.mainContainer}>
+      <View style={style.headerContainer}>
+        <Text
+          style={[
+            style.headerTextStyle,
+            {color: '#84e09b', fontWeight: 'bold'},
+          ]}>
+          L.
+        </Text>
+        <Text
+          style={[
+            style.headerTextStyle,
+            {color: '#207836', fontWeight: 'bold'},
+          ]}>
+          G.
+        </Text>
+        <Text
+          style={[
+            style.headerTextStyle,
+            {color: '#e0d42b', fontWeight: 'bold'},
+          ]}>
+          B.
+        </Text>
+        <Text
+          style={[
+            style.headerTextStyle,
+            {color: '#d43d2c', fontWeight: 'bold'},
+          ]}>
+          T.
+        </Text>
+      </View>
       <FlatList
         data={recipeList}
         renderItem={({item}) => renderRecipeItem(item)}

@@ -61,25 +61,46 @@ const DetailScreen = () => {
       <View style={style.headerContainer}>
         <Text style={style.recipeTitle}>{meal.strMeal}</Text>
       </View>
-      <ScrollView style={style.descriptionContainer}>
-        <Image source={{uri: meal.strMealThumb}} style={style.recipePicture} />
+      <View style={style.descriptionContainer}>
         <FlatList
           data={ingredientList}
           renderItem={renderItem}
-          style={{marginVertical: 20}}
+          style={{marginBottom: 70}}
+          ListHeaderComponent={() => {
+            return (
+              <Image
+                source={{uri: meal.strMealThumb}}
+                style={style.recipePicture}
+              />
+            );
+          }}
+          ListFooterComponent={() => {
+            return (
+              <>
+                <Text style={style.recipeStepsTextStyle}>
+                  {meal.strInstructions}
+                </Text>
+                <View style={style.likeButtonsContainer}>
+                  <View style={style.likeContainer}>
+                    <Image
+                      source={require('../../../assets/img/yummy.png')}
+                      style={style.likeButtonStyle}
+                    />
+                    <Text style={style.likeTextStyle}>YUMMY</Text>
+                  </View>
+                  <View style={style.likeContainer}>
+                    <Image
+                      source={require('../../../assets/img/puking.png')}
+                      style={style.likeButtonStyle}
+                    />
+                    <Text style={style.likeTextStyle}>PUKKY</Text>
+                  </View>
+                </View>
+              </>
+            );
+          }}
         />
-        <Text style={style.recipeStepsTextStyle}>{meal.strInstructions}</Text>
-        <View style={style.likeContainer}>
-          <Image
-            source={require('../../../assets/img/yummy.png')}
-            style={style.likeButtonStyle}
-          />
-          <Image
-            source={require('../../../assets/img/puking.png')}
-            style={style.likeButtonStyle}
-          />
-        </View>
-      </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };

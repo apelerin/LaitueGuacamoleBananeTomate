@@ -23,10 +23,7 @@ const style = StyleSheet.create({
   },
 
   headerContainer: {
-    borderWidth: 2,
-    borderTopWidth: 0,
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 30,
+    borderBottomWidth: 2,
     borderColor: lavenderBlushDarker,
     alignItems: 'center',
     width: 400,
@@ -38,7 +35,7 @@ const style = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 20,
     color: '#000000',
-    marginVertical: 10,
+    marginVertical: 15,
   },
 
   descriptionContainer: {
@@ -51,6 +48,7 @@ const style = StyleSheet.create({
     borderRadius: 10,
     alignSelf: 'center',
     marginTop: 15,
+    marginBottom: 35,
   },
 
   ingredientTextStyle: {
@@ -60,19 +58,33 @@ const style = StyleSheet.create({
   },
 
   recipeStepsTextStyle: {
+    marginTop: 40,
     fontSize: 17,
   },
 
-  likeContainer: {
+  likeButtonsContainer: {
     marginTop: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    paddingHorizontal: 15,
+  },
+
+  likeContainer: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   likeButtonStyle: {
     marginHorizontal: 20,
     width: 60,
     height: 60,
+  },
+
+  likeTextStyle: {
+    fontSize: 15,
+    fontFamily: 'Noteworthy-Bold',
+    color: '#4E4E4E'
   },
 });
 
