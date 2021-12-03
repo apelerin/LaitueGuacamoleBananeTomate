@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {SafeAreaView, FlatList} from 'react-native';
+import React, {useCallback, useEffect, useState} from 'react';
+import {SafeAreaView, FlatList, RefreshControl} from 'react-native';
 import style from './listRecipeView.style';
 import RecipeElementView from '../../components/recipeElement/recipeElementView';
 import axios from 'axios';
@@ -12,6 +12,8 @@ const renderRecipeItem = item => {
 
 const RecipeListView = () => {
   const [recipeList, setRecipeList] = useState([]);
+  const [refreshing, setRefreshing] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -29,6 +31,16 @@ const RecipeListView = () => {
       setRecipeList(list);
     }
     fetchData();
+  }, [toggle]);
+
+  const wait = timeout => {
+    return new Promise(resolve => setTimeout(resolve, timeout));
+  };
+
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    setToggle(!toggle);
+    wait(2000).then(() => setRefreshing(false));
   }, []);
 
   return (
@@ -36,6 +48,9 @@ const RecipeListView = () => {
       <FlatList
         data={recipeList}
         renderItem={({item}) => renderRecipeItem(item)}
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }
       />
     </SafeAreaView>
   );
