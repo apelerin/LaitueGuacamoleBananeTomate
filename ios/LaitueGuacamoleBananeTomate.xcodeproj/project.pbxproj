@@ -11,9 +11,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1B13C457344F4E7592E8E04E /* libPods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C828E0F57E99D4B9B68CABD7 /* libPods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.a */; };
+		4BC80541BB6E49494C919FF4 /* libPods-LaitueGuacamoleBananeTomate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB768D13746B2BF3D3553B4E /* libPods-LaitueGuacamoleBananeTomate.a */; };
+		5911560227598BBF00F04E9E /* Bittermilk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5911560127598BBF00F04E9E /* Bittermilk.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		E2218E4C12643C3947E5324C /* libPods-LaitueGuacamoleBananeTomate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8471A376428699D14D7FF /* libPods-LaitueGuacamoleBananeTomate.a */; };
+		E3D1042841F90D9DDE7D4FF2 /* libPods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6332B52155F06D6413948266 /* libPods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +37,15 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = LaitueGuacamoleBananeTomate/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LaitueGuacamoleBananeTomate/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LaitueGuacamoleBananeTomate/main.m; sourceTree = "<group>"; };
-		43666A9B3D4EBAF7F20D59CD /* Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.debug.xcconfig"; path = "Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5166340C16450A400AE97148 /* Pods-LaitueGuacamoleBananeTomate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaitueGuacamoleBananeTomate.release.xcconfig"; path = "Target Support Files/Pods-LaitueGuacamoleBananeTomate/Pods-LaitueGuacamoleBananeTomate.release.xcconfig"; sourceTree = "<group>"; };
+		171DC7B43BC085A7BEFABB54 /* Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.debug.xcconfig"; path = "Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5588AE34847B4AC8B54C19BF /* Pods-LaitueGuacamoleBananeTomate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaitueGuacamoleBananeTomate.release.xcconfig"; path = "Target Support Files/Pods-LaitueGuacamoleBananeTomate/Pods-LaitueGuacamoleBananeTomate.release.xcconfig"; sourceTree = "<group>"; };
+		5911560127598BBF00F04E9E /* Bittermilk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bittermilk.ttf; path = ../assets/fonts/Bittermilk.ttf; sourceTree = "<group>"; };
+		6332B52155F06D6413948266 /* libPods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7009C59F60386754734053A3 /* Pods-LaitueGuacamoleBananeTomate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaitueGuacamoleBananeTomate.debug.xcconfig"; path = "Target Support Files/Pods-LaitueGuacamoleBananeTomate/Pods-LaitueGuacamoleBananeTomate.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = LaitueGuacamoleBananeTomate/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C828E0F57E99D4B9B68CABD7 /* libPods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4D8471A376428699D14D7FF /* libPods-LaitueGuacamoleBananeTomate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LaitueGuacamoleBananeTomate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E78C9E3C2A9DB054A38185BF /* Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.release.xcconfig"; path = "Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB768D13746B2BF3D3553B4E /* libPods-LaitueGuacamoleBananeTomate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LaitueGuacamoleBananeTomate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFBAE2FF5ACCDC8DECC7B8C7 /* Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.release.xcconfig"; path = "Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		EE78FE9D09E62DFD34418C07 /* Pods-LaitueGuacamoleBananeTomate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaitueGuacamoleBananeTomate.debug.xcconfig"; path = "Target Support Files/Pods-LaitueGuacamoleBananeTomate/Pods-LaitueGuacamoleBananeTomate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B13C457344F4E7592E8E04E /* libPods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.a in Frameworks */,
+				E3D1042841F90D9DDE7D4FF2 /* libPods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2218E4C12643C3947E5324C /* libPods-LaitueGuacamoleBananeTomate.a in Frameworks */,
+				4BC80541BB6E49494C919FF4 /* libPods-LaitueGuacamoleBananeTomate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				D4D8471A376428699D14D7FF /* libPods-LaitueGuacamoleBananeTomate.a */,
-				C828E0F57E99D4B9B68CABD7 /* libPods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.a */,
+				AB768D13746B2BF3D3553B4E /* libPods-LaitueGuacamoleBananeTomate.a */,
+				6332B52155F06D6413948266 /* libPods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,12 +111,11 @@
 		54F7C0627E85839372AC9A94 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EE78FE9D09E62DFD34418C07 /* Pods-LaitueGuacamoleBananeTomate.debug.xcconfig */,
-				5166340C16450A400AE97148 /* Pods-LaitueGuacamoleBananeTomate.release.xcconfig */,
-				43666A9B3D4EBAF7F20D59CD /* Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.debug.xcconfig */,
-				E78C9E3C2A9DB054A38185BF /* Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.release.xcconfig */,
+				7009C59F60386754734053A3 /* Pods-LaitueGuacamoleBananeTomate.debug.xcconfig */,
+				5588AE34847B4AC8B54C19BF /* Pods-LaitueGuacamoleBananeTomate.release.xcconfig */,
+				171DC7B43BC085A7BEFABB54 /* Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.debug.xcconfig */,
+				BFBAE2FF5ACCDC8DECC7B8C7 /* Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,6 +129,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				5911560127598BBF00F04E9E /* Bittermilk.ttf */,
 				13B07FAE1A68108700A75B9A /* LaitueGuacamoleBananeTomate */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* LaitueGuacamoleBananeTomateTests */,
@@ -156,12 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "LaitueGuacamoleBananeTomateTests" */;
 			buildPhases = (
-				500CB450062825F37CD1FAAF /* [CP] Check Pods Manifest.lock */,
+				2632D28B0CEDF9D72BF7E64F /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				D9E7156DFC448F861909FFAD /* [CP] Embed Pods Frameworks */,
-				61CF1CD9714E61B030A95D11 /* [CP] Copy Pods Resources */,
+				9278CFB3002B1BBE2BB1853A /* [CP] Embed Pods Frameworks */,
+				94B07B4AF1B589ACD4110C8F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,14 +179,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "LaitueGuacamoleBananeTomate" */;
 			buildPhases = (
-				1B602A5BD93279EF33440120 /* [CP] Check Pods Manifest.lock */,
+				D535E3E633A021BDDB4C3221 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				CF343421D3642A658560E920 /* [CP] Embed Pods Frameworks */,
-				A2E6EDE3603256EE98619764 /* [CP] Copy Pods Resources */,
+				954DDDB5535B263CFF819F5F /* [CP] Embed Pods Frameworks */,
+				4CBF7B011657B2AA147203FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5911560227598BBF00F04E9E /* Bittermilk.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -265,29 +268,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		1B602A5BD93279EF33440120 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LaitueGuacamoleBananeTomate-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		500CB450062825F37CD1FAAF /* [CP] Check Pods Manifest.lock */ = {
+		2632D28B0CEDF9D72BF7E64F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,24 +290,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		61CF1CD9714E61B030A95D11 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A2E6EDE3603256EE98619764 /* [CP] Copy Pods Resources */ = {
+		4CBF7B011657B2AA147203FF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,7 +307,41 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate/Pods-LaitueGuacamoleBananeTomate-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CF343421D3642A658560E920 /* [CP] Embed Pods Frameworks */ = {
+		9278CFB3002B1BBE2BB1853A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94B07B4AF1B589ACD4110C8F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		954DDDB5535B263CFF819F5F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,21 +358,26 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate/Pods-LaitueGuacamoleBananeTomate-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D9E7156DFC448F861909FFAD /* [CP] Embed Pods Frameworks */ = {
+		D535E3E633A021BDDB4C3221 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LaitueGuacamoleBananeTomate-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests/Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -429,7 +432,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43666A9B3D4EBAF7F20D59CD /* Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.debug.xcconfig */;
+			baseConfigurationReference = 171DC7B43BC085A7BEFABB54 /* Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -456,7 +459,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E78C9E3C2A9DB054A38185BF /* Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.release.xcconfig */;
+			baseConfigurationReference = BFBAE2FF5ACCDC8DECC7B8C7 /* Pods-LaitueGuacamoleBananeTomate-LaitueGuacamoleBananeTomateTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -480,13 +483,14 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE78FE9D09E62DFD34418C07 /* Pods-LaitueGuacamoleBananeTomate.debug.xcconfig */;
+			baseConfigurationReference = 7009C59F60386754734053A3 /* Pods-LaitueGuacamoleBananeTomate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = LaitueGuacamoleBananeTomate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,12 +510,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5166340C16450A400AE97148 /* Pods-LaitueGuacamoleBananeTomate.release.xcconfig */;
+			baseConfigurationReference = 5588AE34847B4AC8B54C19BF /* Pods-LaitueGuacamoleBananeTomate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = LaitueGuacamoleBananeTomate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -561,7 +566,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -577,7 +582,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -627,7 +632,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -636,7 +641,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
