@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+import DetailScreen from './screens/recipeDetailScreen/detailScreen';
 import RecipeListView from './screens/listRecipeView/recipeListView';
-import DetailScreen from './screens/detailscreendir/detailScreen';
 import SignUpScreen from './screens/authScreens/signUpScreen/signUpScreen';
 import LoginScreen from './screens/authScreens/loginScreen/loginScreen';
 import AuthScreen from './screens/authScreens/authScreen';
@@ -27,7 +27,7 @@ const AppNavigator = () => {
       {isLogged ? (
         <>
           <Stack.Screen name="recipeList" component={RecipeListView} />
-          <Stack.Screen name="DetailScreen" component={DetailScreen} />
+          <Stack.Screen name="detailScreen" component={DetailScreen} />
         </>
       ) : (
         <>
