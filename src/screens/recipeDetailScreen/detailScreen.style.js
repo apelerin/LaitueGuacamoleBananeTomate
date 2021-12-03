@@ -84,7 +84,7 @@ const style = StyleSheet.create({
   likeTextStyle: {
     fontSize: 15,
     fontFamily: 'Noteworthy-Bold',
-    color: '#4E4E4E'
+    color: '#4E4E4E',
   },
 });
 

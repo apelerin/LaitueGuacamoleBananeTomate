@@ -1,8 +1,16 @@
-import React, {useCallback, useEffect, useState} from 'react';
-import {SafeAreaView, FlatList, RefreshControl, View, Text} from 'react-native';
+import React, {useCallback, useEffect, useState, useMemo} from 'react';
+import {
+  SafeAreaView,
+  FlatList,
+  RefreshControl,
+  View,
+  Text,
+  TextInput,
+} from 'react-native';
 import style from './listRecipeView.style';
 import RecipeElementView from '../../components/recipeElement/recipeElementView';
 import axios from 'axios';
+import {Searchbar} from 'react-native-paper';
 
 const baseUrl = 'https://www.themealdb.com/api/json/v1/1';
 
@@ -14,6 +22,7 @@ const RecipeListView = () => {
   const [recipeList, setRecipeList] = useState([]);
   const [refreshing, setRefreshing] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     async function fetchData() {
@@ -43,6 +52,10 @@ const RecipeListView = () => {
     wait(2000).then(() => setRefreshing(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const dataFilter = useMemo(() => {
+    return recipeList.filter(o => o.strMeal.includes(search));
+  }, [recipeList, search]);
 
   return (
     <SafeAreaView style={style.mainContainer}>
@@ -77,11 +90,20 @@ const RecipeListView = () => {
         </Text>
       </View>
       <FlatList
-        data={recipeList}
+        data={dataFilter}
         renderItem={({item}) => renderRecipeItem(item)}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
+        ListHeaderComponent={() => {
+          return (
+            <Searchbar
+              placeholder="Search"
+              onChangeText={setSearch}
+              value={search}
+            />
+          );
+        }}
       />
     </SafeAreaView>
   );

@@ -42,6 +42,7 @@ const SignUpScreen = () => {
       result.push(user);
       AsyncStorage.setItem('users', JSON.stringify(result));
     });
+    navigation.navigate('authRouter');
   };
 
   const validateConfMdp = useCallback(() => {
@@ -67,7 +68,7 @@ const SignUpScreen = () => {
       </View>
       <View style={style.inputFieldsContainer}>
         <TextInput
-          style={style.inputFields}
+          style={[style.inputFields, {marginBottom: 35}]}
           placeholder="Pseudo"
           keyboardType="ascii-capable"
           value={nickname}
