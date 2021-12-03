@@ -19,7 +19,6 @@ const RecipeListView = () => {
       for (let i = 0; i < 10; i++) {
         await axios.get(`${baseUrl}/random.php`).then(response => {
           const {idMeal, strMealThumb, strMeal} = response.data.meals[0];
-          console.log(i);
           list.push({
             idMeal: idMeal,
             strMeal: strMeal,
@@ -27,7 +26,6 @@ const RecipeListView = () => {
           });
         });
       }
-      console.log(list);
       setRecipeList(list);
     }
     fetchData();
