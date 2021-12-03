@@ -2,8 +2,8 @@ import {StyleSheet} from 'react-native';
 
 import {
   lavenderBlush,
-  blueMunshell,
-  lightSkyBlue,
+  lavenderBlushDark,
+  lavenderBlushDarker,
 } from '../../../assets/colors';
 
 const style = StyleSheet.create({
@@ -23,10 +23,16 @@ const style = StyleSheet.create({
   welcomingTextStyle: {
     fontSize: 25,
     fontWeight: 'bold',
+    marginBottom: 20,
+  },
+
+  appNameContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
   },
 
   appNameStyle: {
-    marginTop: 10,
     textAlign: 'center',
     fontFamily: 'Bittermilk',
     fontSize: 40,
@@ -49,14 +55,14 @@ const style = StyleSheet.create({
   submitButton: {
     borderWidth: 2,
     borderRadius: 15,
-    borderColor: blueMunshell,
+    borderColor: lavenderBlushDarker,
     height: 40,
     width: 180,
     alignItems: 'center',
     justifyContent: 'space-evenly',
     flexDirection: 'column',
     marginVertical: 20,
-    backgroundColor: lightSkyBlue,
+    backgroundColor: lavenderBlushDark,
   },
 });
 
