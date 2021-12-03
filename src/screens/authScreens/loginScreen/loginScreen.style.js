@@ -2,8 +2,8 @@ import {StyleSheet} from 'react-native';
 
 import {
   lavenderBlush,
-  lightSkyBlue,
-  blueMunshell,
+  lavenderBlushDark,
+  lavenderBlushDarker,
 } from '../../../../assets/colors';
 
 const style = StyleSheet.create({
@@ -43,13 +43,13 @@ const style = StyleSheet.create({
 
   inputFields: {
     borderWidth: 1,
-    borderColor: blueMunshell,
+    borderColor: lavenderBlushDarker,
     borderRadius: 5,
     height: 40,
     width: 330,
     marginVertical: 15,
     paddingStart: 10,
-    backgroundColor: lightSkyBlue,
+    backgroundColor: lavenderBlushDark,
   },
 
   footerContainer: {
@@ -67,7 +67,7 @@ const style = StyleSheet.create({
     justifyContent: 'space-evenly',
     flexDirection: 'column',
     marginBottom: 20,
-    backgroundColor: lightSkyBlue,
+    backgroundColor: lavenderBlushDark,
   },
 });
 

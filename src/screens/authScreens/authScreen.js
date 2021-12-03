@@ -15,7 +15,42 @@ const SignUpScreen = () => {
     <SafeAreaView style={style.mainContainer}>
       <View style={style.headerContainer}>
         <Text style={style.welcomingTextStyle}>Bienvenue sur</Text>
-        <Text style={style.appNameStyle}>Laitue Guacamole Banane Tomate</Text>
+        <View style={style.appNameContainer}>
+          <Text
+            style={[
+              style.appNameStyle,
+              {color: '#84e09b', fontWeight: 'bold'},
+            ]}>
+            L
+          </Text>
+          <Text style={[style.appNameStyle, {marginEnd: 12}]}>aitue</Text>
+          <Text
+            style={[
+              style.appNameStyle,
+              {color: '#207836', fontWeight: 'bold'},
+            ]}>
+            G
+          </Text>
+          <Text style={style.appNameStyle}>uacamole</Text>
+        </View>
+        <View style={style.appNameContainer}>
+          <Text
+            style={[
+              style.appNameStyle,
+              {color: '#e0d42b', fontWeight: 'bold'},
+            ]}>
+            B
+          </Text>
+          <Text style={[style.appNameStyle, {marginEnd: 12}]}>anane</Text>
+          <Text
+            style={[
+              style.appNameStyle,
+              {color: '#d43d2c', fontWeight: 'bold'},
+            ]}>
+            T
+          </Text>
+          <Text style={style.appNameStyle}>omate</Text>
+        </View>
       </View>
       <ImageBackground
         style={style.backgroundImageStyle}
@@ -36,5 +71,4 @@ const SignUpScreen = () => {
     </SafeAreaView>
   );
 };
-
 export default SignUpScreen;
