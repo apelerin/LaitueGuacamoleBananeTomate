@@ -7,9 +7,10 @@ import {
   FlatList,
   View,
   ScrollView,
+  Button,
 } from 'react-native';
 import style from './detailScreen.style';
-import {useRoute} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import axios from 'axios';
 
 const baseUrl = 'https://www.themealdb.com/api/json/v1/1';
@@ -18,6 +19,7 @@ const DetailScreen = () => {
   const route = useRoute();
   const [meal, setMeal] = useState({});
   const [ingredientList, setIngredientList] = useState([]);
+  const navigation = useNavigation();
 
   useEffect(() => {
     async function fetchData() {
@@ -61,25 +63,47 @@ const DetailScreen = () => {
       <View style={style.headerContainer}>
         <Text style={style.recipeTitle}>{meal.strMeal}</Text>
       </View>
-      <ScrollView style={style.descriptionContainer}>
-        <Image source={{uri: meal.strMealThumb}} style={style.recipePicture} />
+      <View style={style.descriptionContainer}>
         <FlatList
           data={ingredientList}
           renderItem={renderItem}
-          style={{marginVertical: 20}}
+          style={{marginBottom: 40}}
+          ListHeaderComponent={() => {
+            return (
+              <Image
+                source={{uri: meal.strMealThumb}}
+                style={style.recipePicture}
+              />
+            );
+          }}
+          ListFooterComponent={() => {
+            return (
+              <>
+                <Text style={style.recipeStepsTextStyle}>
+                  {meal.strInstructions}
+                </Text>
+                <View style={style.likeButtonsContainer}>
+                  <View style={style.likeContainer}>
+                    <Image
+                      source={require('../../../assets/img/yummy.png')}
+                      style={style.likeButtonStyle}
+                    />
+                    <Text style={style.likeTextStyle}>YUMMY</Text>
+                  </View>
+                  <View style={style.likeContainer}>
+                    <Image
+                      source={require('../../../assets/img/puking.png')}
+                      style={style.likeButtonStyle}
+                    />
+                    <Text style={style.likeTextStyle}>PUKKY</Text>
+                  </View>
+                </View>
+                <Button title={'Retour'} onPress={navigation.goBack} />
+              </>
+            );
+          }}
         />
-        <Text style={style.recipeStepsTextStyle}>{meal.strInstructions}</Text>
-        <View style={style.likeContainer}>
-          <Image
-            source={require('../../../assets/img/yummy.png')}
-            style={style.likeButtonStyle}
-          />
-          <Image
-            source={require('../../../assets/img/puking.png')}
-            style={style.likeButtonStyle}
-          />
-        </View>
-      </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };
